@@ -1,0 +1,15 @@
+1.
+Every browser has its own javascript engine which it uses to run the javascript in the browser.
+Nodejs runs on V8 engine which the same as Chrome javascript engine but without the DOM and UI component becasue it interprted on the server side and not on the client side
+2.
+Javascript browser engine uses ESmodule paradigm to load the file
+while node.js uses Common.js paradigm to load the file
+3.
+A lot of the APIs of the browser are missing like anything related to DOM and CSS, 
+Performance, Document, APIs related to window. So for logic’s sake, the global object was renamed to global, 
+since it does not refer to a window and has no window like properties.
+4.
+Browsers do have multiple threads to support the execution of javascript but in node.js the threadpool is used for super fast IO. When you use native modules they can tap into the threadpool, usually to do things like read from disk or send/receive data over the network in the background without wasting precious main thread CPU cycles that are reserved to your javascript code. This means that as long as you use the async versions of IO operation methods, the IO is basically zero cost for the javascript thread because the load is handled by another thread in the background. This is part of what makes it possible to have high-performance javascript based servers even though javascript itself only runs on one thread.
+
+
+Reference : https://medium.com/swlh/what-is-node-js-and-how-does-it-differ-from-a-browser-ddebef00cbd9
