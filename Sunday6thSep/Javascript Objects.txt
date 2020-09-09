@@ -1,0 +1,32 @@
+Object in Javascript :
+
+Javascript is designed on a simple object-based paradigm. 
+An object is a collection of properties, and a property is an association between a name (or key) and a value.
+Object behaviour can be defined by methods. In addition to objects that are predefined in the browser, you can define your own objects. 
+Object are real life things expressed in computer, like a car can be an object in javascript with characteristics 
+as color of the car , model of the car , make year of the car and have behaviour as can start , car can be stopped , car can be accelarated.
+
+Pattern of relating an object with its characteristics
+objectName.propertyName
+
+
+CODE : # 1 way
+var myCar = new Object();
+myCar.make = 'Ford';
+myCar.model = 'Mustang';
+myCar.year = 1969;
+
+CODE: 2 Way
+var myCar = {
+    make: 'Ford',
+    model: 'Mustang',
+    year: 1969
+};
+
+Unassigned properties of an object are undefined.
+
+Creating new objects :
+
+JavaScript has a number of predefined objects. In addition, you can create your own objects. You can create an object using an object initializer. 
+Alternatively, you can first create a constructor function and then instantiate an object invoking that function in conjunction with the new operator.
+
